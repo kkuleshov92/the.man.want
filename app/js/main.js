@@ -1,2 +1,2 @@
 
-//=include ../components/footer/footer.js
+//=include ../components/....
