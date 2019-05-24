@@ -1,5 +1,9 @@
 .services {
-
+    &__text {
+        font-size: 52px;
+        font-family: 'Raleway-800', sans-serif;
+        color: #777;
+    }
 }
 
 @media (max-width: 1219px) {
