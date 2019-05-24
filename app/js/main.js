@@ -1,2 +1,13 @@
-
-//=include ../components/....
+//=include ../components/contact/contact.js
+//=include ../components/features/features.js
+//=include ../components/footer/footer.js
+//=include ../components/header/header.js
+//=include ../components/insta/insta.js
+//=include ../components/legend/legend.js
+//=include ../components/menu/menu.js
+//=include ../components/offer/offer.js
+//=include ../components/order-car/order-car.js
+//=include ../components/order-consult/order-consult.js
+//=include ../components/reviews/reviews.js
+//=include ../components/services/services.js
+//=include ../components/video/video.js
