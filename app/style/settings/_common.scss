@@ -1,6 +1,6 @@
 $mainColor: #d3964d;
 $mainFont: 'Montserrat', sans-serif;
-$secondaryFont: 'Raleway', sans-serif;
+$secondaryFont: 'Raleway-800', sans-serif;
 
 @font-face {
 	font-family: 'Raleway-800';
@@ -54,9 +54,8 @@ svg {
 .title {	
 	font-size: 36px;
 	line-height: 1.2;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
-	letter-spacing: -.035em;
+	font-family: 'Raleway-800', sans-serif;
+	letter-spacing: .045em;
 	@include r(1219){
 		font-size: 36px;
 	}
@@ -88,6 +87,20 @@ svg {
 }
 
 .ttu {
+	text-transform: uppercase;
+}
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #000;
+	background: #d3964d;
+	height: 55px;
+	line-height: 55px;
+	cursor: pointer;
+	width: 170px;
+	text-align: center;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 

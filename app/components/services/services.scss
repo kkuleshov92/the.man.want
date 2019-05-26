@@ -1,29 +1,129 @@
 .services {
+    padding: 50px 0;
     &__text {
         font-size: 52px;
         font-family: 'Raleway-800', sans-serif;
         font-weight: 800;
         color: #777;
         letter-spacing: 0.043em;
+        line-height: 1.1;
+        &_1 {
+            margin-top: 41px;
+        }
+        &_2 {
+            margin-top: 23px;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 69px;
+        flex-wrap: wrap;
+    }
+    &__item {
+        border: 1px solid #e1e1e1;
+        width: 400px;
+        height: 300px;
+        padding: 46px 20px 50px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.1), -1px 1px 1px rgba(0,0,0,.1);
+        h3 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #0f0f0f;
+            text-align: center;
+            letter-spacing: .04em;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 18px;
+            letter-spacing: .045em;
+            line-height: 26px;
+        }
+    }
+    .btn_services {
+        margin: auto auto 0;
     }
 }
 
 @media (max-width: 1219px) {
-
+    .services {
+        &__text {
+            font-size: 48px;
+        }
+        &__item {
+            width: 300px;
+            padding: 30px 10px;
+            h3 {
+                font-size: 20px;
+            }
+            p {
+            }
+        }
+    }
 }
 
 @media (max-width: 1023px) {
-
+    .services {
+        &__text {
+            font-size: 44px;
+        }
+        &__list {
+            justify-content: center;
+            margin-top: 20px;
+        }
+        &__item {
+            margin: 20px;
+            width: 320px;
+            height: 280px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
-
+    .services {
+        &__item {
+            margin: 15px 0;
+            width: auto;
+            height: auto;
+            padding: 20px 30px;
+        }
+        &__list {
+            margin-top: 0;
+        }
+        .btn_services {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 38px;
+            br {
+                display: none;
+            }
+            &_1 {
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 @media (max-width: 639px) {
-
+    .services {
+        &__text {
+            font-size: 32px;
+        }
+    }
 }
 
 @media (max-width: 479px) {
-
+    .services {
+        &__text {
+            font-size: 26px;
+        }
+        &__item {
+            padding: 20px 10px;
+        }
+    }
 }
