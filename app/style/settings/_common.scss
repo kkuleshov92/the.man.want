@@ -109,6 +109,9 @@ svg {
 	text-align: center;
 	font-weight: 600;
 	text-transform: uppercase;
+	&:hover {
+		transition: all .3s ease;
+	}
 }
 
 

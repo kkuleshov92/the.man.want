@@ -1,6 +1,6 @@
 .offer {
     color: #fff;
-    background: #191919 url(../img/offer-bg.png) no-repeat center center;
+    background: #191919 url(../img/offer-bg.png) no-repeat center center / cover;
     padding: 99px 0 50px;
     &__title-text {
         font-size: 14px;
@@ -12,7 +12,7 @@
         line-height: 22px;
     }
     &__list {
-        margin-top: 54px;
+        margin-top: 56px;
         display: flex;
         justify-content: center;
     }
@@ -21,7 +21,7 @@
         padding: 35px 28px 49px;
         width: 446px;
         margin: 0 30px;
-        background: #1c1c1e url(../img/offer-smoke.png) no-repeat center center;
+        background: #1c1c1e url(../img/offer-smoke.png) no-repeat center center / cover;
         h3 {
             font-size: 36px;
             font-weight: 700;
@@ -34,6 +34,9 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: .04em;
+        }
+        &:hover {
+            background: #fff url(../img/offer-smoke.png) no-repeat center center / cover;
         }
     }
     &__item-name {
@@ -86,10 +89,11 @@
     &__item-bottom {
         display: flex;
         justify-content: space-between;
+        margin-top: 6px;
     }
-    &__item-text {
+    &__item-btn {
         display: flex;
-        flex-direction: column;
+        align-items: flex-end;
     }
     .btn_offer {
         width: 150px;
@@ -98,7 +102,10 @@
         color: $mainColor;
         font-weight: 500;
         font-size: 16px;
-        margin-top: 58px;
+        &:hover {
+            background: $mainColor;
+            color: #1c1c1e;
+        }
     }
     &__tax,
     &__time {
@@ -107,7 +114,7 @@
         letter-spacing: .045em;
     }
     &__tax {
-        margin-top: 26px;
+        margin-top: 20px;
     }
     &__time {
         margin-top: 10px;
@@ -119,17 +126,81 @@
 }
 
 @media (max-width: 1023px) {
-
+    .offer {
+        &__list {
+            justify-content: space-between;
+            margin-top: 0;
+        }
+        &__item {
+            width: 365px;
+            margin: 20px 0 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &__item-price {
+            margin-top: 20px;
+        }
+        .btn_offer {
+            align-self: flex-end;
+        }
+    }
 }
 
 @media (max-width: 767px) {
-
+    .offer {
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
 @media (max-width: 639px) {
-
+    .offer {
+        &__title-text {
+            width: 100%;
+            br {
+                display: none;
+            }
+        }
+    }
 }
 
 @media (max-width: 479px) {
-
+    .offer {
+        &__item {
+            width: 300px;
+            padding: 20px;
+            h4 {
+                font-size: 18px;
+            }
+        }
+        &__item-bottom {
+            flex-direction: column;
+        }
+        &__item-info {
+            order: 1;
+        }
+        .btn_offer {
+            margin: 10px auto;
+        }
+        &__tax,
+        &__time {
+            margin: 10px 0;
+        }
+        &__car-box {
+            img {
+                max-width: 255px;
+            }
+        }
+        &__item-logo {
+            img {
+                max-width: 50px;
+            }
+            p {
+                font-size: 16px;
+                letter-spacing: .04em;
+            }
+        }
+    }
 }
