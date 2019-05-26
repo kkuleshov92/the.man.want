@@ -21,7 +21,11 @@
         padding: 35px 28px 49px;
         width: 446px;
         margin: 0 30px;
-        background: #1c1c1e url(../img/offer-smoke.png) no-repeat center center / cover;
+        background: #1c1c1e url(../img/offer-smoke.png) no-repeat center top -140px / cover;
+        &:hover {
+            background: #fff url(../img/offer-smoke.png) no-repeat center top -140px / cover;
+            color: #0f0f0f;
+        }
         h3 {
             font-size: 36px;
             font-weight: 700;
@@ -34,9 +38,6 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: .04em;
-        }
-        &:hover {
-            background: #fff url(../img/offer-smoke.png) no-repeat center center / cover;
         }
     }
     &__item-name {
