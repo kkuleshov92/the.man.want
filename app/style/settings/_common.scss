@@ -56,6 +56,9 @@ svg {
 	line-height: 1.2;
 	font-family: 'Raleway-800', sans-serif;
 	letter-spacing: .045em;
+	&_center {
+		text-align: center;
+	}
 	@include r(1219){
 		font-size: 36px;
 	}
@@ -72,6 +75,10 @@ svg {
 	@include r(479){	
 		font-size: 24px;
 	}
+}
+
+.text-semibold {
+	font-weight: 600;
 }
 
 .text-bold {
@@ -94,7 +101,7 @@ svg {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	color: #000;
-	background: #d3964d;
+	background: $mainColor;
 	height: 55px;
 	line-height: 55px;
 	cursor: pointer;

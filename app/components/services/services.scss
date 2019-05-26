@@ -1,5 +1,5 @@
 .services {
-    padding: 50px 0;
+    padding: 50px 0 96px;
     &__text {
         font-size: 52px;
         font-family: 'Raleway-800', sans-serif;
@@ -17,14 +17,14 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        margin-top: 69px;
+        margin-top: 67px;
         flex-wrap: wrap;
     }
     &__item {
         border: 1px solid #e1e1e1;
         width: 400px;
         height: 300px;
-        padding: 46px 20px 50px;
+        padding: 49px 20px 50px;
         display: flex;
         flex-direction: column;
         box-shadow: 1px 1px 1px rgba(0,0,0,.1), -1px 1px 1px rgba(0,0,0,.1);

@@ -1,5 +1,117 @@
 .offer {
-
+    color: #fff;
+    background: #191919 url(../img/offer-bg.png) no-repeat center center;
+    padding: 99px 0 50px;
+    &__title-text {
+        font-size: 14px;
+        width: 600px;
+        margin: 17px auto 0;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: .045em;
+        line-height: 22px;
+    }
+    &__list {
+        margin-top: 54px;
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        border: 1px solid #fff;
+        padding: 35px 28px 49px;
+        width: 446px;
+        margin: 0 30px;
+        background: #1c1c1e url(../img/offer-smoke.png) no-repeat center center;
+        h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: $mainColor;
+            text-align: center;
+            letter-spacing: .04em;
+        }
+        h4 {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+    }
+    &__item-name {
+        margin-top: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        span {
+            font-size: 18px;
+            color: #9f9f9f;
+            font-weight: 600;
+            letter-spacing: .04em;
+        }
+    }
+    &__item-logo {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        align-items: center;
+        p {
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: .24em;
+        }
+    }
+    &__car-box {
+        img {
+            margin: 25px auto 0;
+            display: block;
+            max-width: 300px;
+        }
+    }
+    &__item-price {
+        font-size: 18px;
+        letter-spacing: .06em;
+        margin-top: 35px;
+        span:first-child {
+            font-weight: 700;
+        }
+        span:last-child {
+            font-weight: 300;
+            color: $mainColor;
+        }
+        span:nth-child(3) {
+            color: $mainColor;
+            font-weight: 700;
+        }
+    }
+    &__item-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn_offer {
+        width: 150px;
+        background: #1c1c1e;
+        border: 2px solid $mainColor;
+        color: $mainColor;
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: 58px;
+    }
+    &__tax,
+    &__time {
+        font-size: 12px;
+        color: #b8b8b8;
+        letter-spacing: .045em;
+    }
+    &__tax {
+        margin-top: 26px;
+    }
+    &__time {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 1219px) {
