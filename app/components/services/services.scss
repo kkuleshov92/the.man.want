@@ -79,6 +79,9 @@
             margin: 20px;
             width: 320px;
             height: 280px;
+            &_last {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -90,6 +93,9 @@
             width: auto;
             height: auto;
             padding: 20px 30px;
+            &_last {
+                margin-bottom: 0;
+            }
         }
         &__list {
             margin-top: 0;
