@@ -2,7 +2,7 @@
     background: #1c1c1e;
     color: #fff;
     padding-top: 92px;
-    padding-bottom: 80px;
+    padding-bottom: 79px;
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -15,6 +15,12 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        img {
+            width: 100%;
+        }
+        &_last {
+            display: none;
+        }
     }
     .btn_insta {
         &:hover {
@@ -27,21 +33,76 @@
 
 
 @media (max-width: 1279px) {
-
+    .insta {
+        &__item {
+            width: 240px;
+            margin-bottom: 10px;
+        }
+        &__list {
+            margin-top: 30px;
+        }
+    }
 }
 
 @media (max-width: 1023px) {
-
+    .insta {
+        .title {
+            text-align: center;
+        }
+        &__list {
+            justify-content: space-between;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        &__item {
+            width: 242px;
+            margin: 5px;
+            &_last {
+                display: block;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
-
+    .insta {
+        &__item {
+            width: 300px;
+            margin: 10px;
+            &_last {
+                display: none;
+            }
+        }
+        &__list {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
 }
 
 @media (max-width: 639px) {
-
+    .insta {
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            width: 250px;
+            margin: 10px 0;
+        }
+        &__item_btn {
+            margin-bottom: 0;
+        }
+        .btn_insta {
+            margin-top: 30px;
+        }
+    }
 }
 
 @media (max-width: 479px) {
-
+    .insta {
+        &__list {
+            margin-top: 20px;
+        }
+    }
 }
