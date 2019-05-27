@@ -1,7 +1,7 @@
 .offer {
     color: #fff;
     background: #191919 url(../img/offer-bg.png) no-repeat center center / cover;
-    padding: 99px 0 50px;
+    padding: 99px 0 99px;
     &__title-text {
         font-size: 14px;
         width: 600px;
@@ -25,6 +25,24 @@
         &:hover {
             background: #fff url(../img/offer-smoke.png) no-repeat center top -140px / cover;
             color: #0f0f0f;
+            transition: all .3s ease;
+            .offer__item-price span:nth-child(3),
+            .offer__item-price span:last-child,
+            .offer__item-name span {
+                color: #0f0f0f;
+            }
+            .btn_offer {
+                background: $mainColor;
+                color: #0f0f0f;
+                &:hover {
+                    color: $mainColor;
+                    background: #0f0f0f;
+                }
+            }
+            .offer__tax,
+            .offer__time {
+                color: #666;
+            }
         }
         h3 {
             font-size: 36px;
@@ -122,7 +140,7 @@
     }
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1279px) {
 
 }
 

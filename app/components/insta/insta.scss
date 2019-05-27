@@ -1,8 +1,32 @@
 .insta {
-
+    background: #1c1c1e;
+    color: #fff;
+    padding-top: 92px;
+    padding-bottom: 80px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 51px;
+    }
+    &__item {
+        width: 294px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .btn_insta {
+        &:hover {
+            background: #1c1c1e;
+            color: $mainColor;
+            border: 1px solid $mainColor;
+        }
+    }
 }
 
-@media (max-width: 1219px) {
+
+@media (max-width: 1279px) {
 
 }
 
