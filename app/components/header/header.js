@@ -18,7 +18,8 @@ $('.header__left-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.header__right-slider',
-    arrows: false
+    arrows: false,
+    fade: true
 });
 
 $('.header__right-slider').slick({
@@ -27,8 +28,7 @@ $('.header__right-slider').slick({
     asNavFor: '.header__left-slider',
     arrows: true,
     prevArrow: '<div class="header__prev"></div>',
-    nextArrow: '<div class="header__next"></div>',
-    fade: true
+    nextArrow: '<div class="header__next"></div>'
 });
 
 let audioBtn = document.querySelector('.play-audio'),
