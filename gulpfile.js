@@ -20,6 +20,7 @@ let path = {
 		img: 'app/img/*.+(jpg|jpeg|png|svg|ico|gif)',
 		svg: 'app/img/**/*.svg',
 		fonts: 'app/fonts/**/*',
+		music: 'app/sound/**/*',
 		localization: "app/localization/*.json"
 	},
 	build: {
@@ -28,6 +29,7 @@ let path = {
 		scripts: 'build/js',
 		img: 'build/img',
 		fonts: 'build/fonts',
+		music: 'build/sound',
 		localization: "build/localization"
 	},
 	watch: {
@@ -37,7 +39,8 @@ let path = {
 		scripts: 'app/**/*.js',
 		img: 'app/img/*.+(jpg|jpeg|png|svg|ico|gif)',
 		svg: 'app/img/**/*.svg',
-		fonts: 'app/fonts/**/*'
+		fonts: 'app/fonts/**/*',
+		music: 'app/sound/**/*'
 	}
 };
 
@@ -115,6 +118,12 @@ gulp.task('fonts', function() {
 	  	.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('audio', function() {
+	return gulp.src(path.src.music)
+		.pipe(gulp.dest(path.build.music))
+		.pipe(browserSync.reload({stream: true}));
+});
+
 gulp.task('localization', function() {
 	return gulp.src(path.src.localization)
 		.pipe(include())
@@ -176,15 +185,16 @@ gulp.task('make', function() {
   runSequence('folder','files');
 });
 
-gulp.task('watch', ['clean','browser-sync', 'html', 'style', 'scripts', 'img', 'fonts'], function() {
+gulp.task('watch', ['clean','browser-sync', 'html', 'style', 'scripts', 'img', 'fonts', 'audio'], function() {
 	gulp.watch([path.watch.htmlApp, path.watch.html], ['html']);
 	gulp.watch([path.watch.style], ['style']);
 	gulp.watch([path.watch.img], ['img']);
 	// gulp.watch([path.watch.svg], ['svg']);
 	gulp.watch([path.watch.scripts], ['scripts']);
 	gulp.watch([path.watch.fonts], ['fonts']);
+	gulp.watch([path.watch.music], ['audio']);
 });
 
-gulp.task('deploy', ['clean', 'html', 'deploy:style', 'deploy:scripts', 'img', 'fonts', 'localization']);
+gulp.task('deploy', ['clean', 'html', 'deploy:style', 'deploy:scripts', 'img', 'fonts', 'localization', 'audio']);
 
 gulp.task('default', ['watch']);
