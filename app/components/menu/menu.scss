@@ -1,8 +1,137 @@
 .menu {
-  display: none;
+  position: absolute;
+  background: #1c1c1e;
+  width: 100%;
+  padding: 50px 0 150px;
+  z-index: 10;
+  top: 0;
+  left: -250%;
+  transform: rotate(90deg);
+  transition: 1s ease-in-out;
+
+  &.menu-active {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 148px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+  }
+
+  &__social {
+    text-align: right;
+    margin-top: 52px;
+  }
+
+  &__close {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  &__left {
+    width: auto;
+    max-width: 70%;
+    transition: all .5s ease;
+
+    a {
+      color: #fff;
+      font-family: "Raleway-600";
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 78px;
+      letter-spacing: 2.34px;
+    }
+
+    span {
+      display: inline-block;
+      color: #fff;
+      position: relative;
+      top: -5px;
+      left: 20px;
+      font-size: 18px;
+    }
+
+    li {
+      cursor: pointer;
+    }
+
+    a:hover, a:hover+span{
+      color: #d3964d;
+    }
+
+    .submenu-btn .fa-chevron-down{
+      transform: rotate(0deg);
+    }
+    .submenu-btn.submenu-active-btn .fa-chevron-down{
+      transform: rotate(180deg);
+    }
+  }
+
+  &__services {
+    display: none;
+
+    &.submenu-active {
+      display: block;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 35px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      color: #ffffff;
+      font-family: Raleway;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 50px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__tel {
+    margin-bottom: 35px;
+    a {
+      color: #9d9d9d;
+    }
+
+    .tel-moscow {
+      margin-right: 30px;
+    }
+
+    .tel-sochi {
+      margin-right: 55px;
+    }
+
+    .tel-email {
+      margin-right: 70px;
+    }
+
+    span {
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+>>>>>>> 99e1ebbfe0f3b692be4789a78ff2faf3865324ef
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1279px) {
 
 }
 
