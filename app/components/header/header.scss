@@ -230,6 +230,10 @@
     }
   }
   &__audio {
+    display: flex;
+    width: 100px;
+    height: 20px;
+    align-items: flex-end;
 
     audio {
       display: none;
@@ -241,19 +245,20 @@
   }
 
   .play-audio {
-    display: inline-block;
     color: #d3964d;
     font-size: 14px;
     font-weight: 400;
-    line-height: 18px;
     text-transform: uppercase;
     margin-right: 15px;
+    text-align: right;
+    width: 60px;
   }
   &__audio {
     position: relative;
   }
   .audio-equalizer {
-    display: inline-block;
+    display: flex;
+    align-items: flex-end;
     position: relative;
     height: 20px;
 
@@ -284,6 +289,7 @@
         }
       }
     }
+
   }
 
   @keyframes eq1 {
