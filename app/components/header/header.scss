@@ -11,6 +11,7 @@
     position: absolute;
     left: -200px;
     top: 0;
+    z-index: 0;
   }
 }
 .header {
@@ -104,10 +105,11 @@
     margin-top: -6px;
 
     .line-inner {
-      width: 2%;
+      max-width: 2%;
       height: 1px;
       background: #d3964d;
       opacity: 1;
+      transition: .5s ease;
     }
   }
 
@@ -127,6 +129,8 @@
   }
 
   &__logo {
+    position: relative;
+    z-index: 1;
     flex-basis: 70%;
   }
 

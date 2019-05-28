@@ -2,6 +2,7 @@
 
 let leftPagin = $(".header__pagination-left");
 let rightPagin = $(".header__pagination-right");
+let line = $('.line-inner');
 
 $(".header__right-slider").on("init", function(event, slick){
     $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1) + ''));
@@ -11,7 +12,11 @@ $(".header__right-slider").on("init", function(event, slick){
 $(".header__right-slider").on("afterChange", function(event, slick, currentSlide){
     $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1)) + '');
     $(rightPagin).text(String('/0' + slick.slideCount));
+    let count = slick.currentSlide + 1;
+    count == 1 ? line.css('max-width', '2%') :
+        count == 2 ? line.css('max-width', '50%') : line.css('max-width', '100%');
 });
+
 
 
 $('.header__left-slider').slick({
