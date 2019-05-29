@@ -76,7 +76,8 @@
     height: 30px;
     position: absolute;
     right: -8px;
-    top: 160px;
+    //top: 160px;
+    transition: .5s ease;
   }
   &__pagination-left {
     color: #ffffff;
@@ -369,15 +370,109 @@
 }
 
 @media (max-width: 1279px) {
+  .header {
+    padding: 50px 0 80px;
+    background-position: center 150px,center center,center center;
 
+    &__top {
+      margin-bottom: 70px;
+    }
+
+    &__bottom-row {
+      margin-bottom: 60px;
+    }
+
+    &__logo {
+      flex-basis: 60%;
+    }
+
+    &__next, &__prev {
+      top: 200px;
+      right: 50px;
+      z-index: 3;
+    }
+
+    &__next {
+      right: 50px;
+      top: 330px;
+    }
+
+    &__pagination {
+      //top: 360px;
+      right: 40px;
+      z-index: 3;
+    }
+  }
 }
 
 @media (max-width: 1023px) {
+  .header {
+    padding: 20px 0 40px !important;
 
+    &__logo {
+      flex-basis: 50%;
+    }
+    &__title {
+      h1 {
+        line-height: 54px;
+        margin-bottom: 15px;
+      }
+    }
+    &__description {
+      p {
+        padding: 0;
+        &:first-child {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &__tel {
+      flex-basis: 30%;
+    }
+
+    &__center {
+      flex-wrap: wrap;
+    }
+
+    &__left-slider {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__right-slider {
+      width: 80%;
+      left: 0;
+      top: 0;
+    }
+    &__next, &__prev {
+      top: 0;
+      right: -100px;
+      z-index: 3;
+    }
+
+    &__bottom-row {
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    &__next {
+      right: -100px;
+      top: 130px;
+    }
+
+    &__pagination {
+      //top: 390px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+  .header {
 
+    &__pagination {
+      right: 15px;
+    }
+  }
 }
 
 @media (max-width: 639px) {
