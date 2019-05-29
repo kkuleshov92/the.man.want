@@ -3,7 +3,6 @@
 let leftPagin = $(".header__pagination-left");
 let rightPagin = $(".header__pagination-right");
 let line = $('.line-inner');
-var tablet = ($(window).width()) < 1280;
 
 $(".header__right-slider").on("init", function(event, slick){
     $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1) + ''));
@@ -16,12 +15,6 @@ $(".header__right-slider").on("afterChange", function(event, slick, currentSlide
     let count = slick.currentSlide + 1;
     count == 1 ? line.css('max-width', '2%') :
         count == 2 ? line.css('max-width', '50%') : line.css('max-width', '100%');
-    //изменения позиции цифр пагинации слайдера при переключении
-    if(!tablet) {
-        pag.style.top = getCoords(topArrow).top - 170 + 'px';
-    } else {
-        pag.style.top = getCoords(topArrow).top - 130 + 'px';
-    }
 });
 
 
@@ -41,8 +34,8 @@ $('.header__right-slider').slick({
     slidesToScroll: 1,
     asNavFor: '.header__left-slider',
     arrows: true,
-    prevArrow: '<div class="header__prev"></div>',
-    nextArrow: '<div class="header__next"></div>'
+    prevArrow: $('.header__prev'),
+    nextArrow: $('.header__next')
 });
 
 let audioBtn = document.querySelector('.play-audio'),
@@ -57,24 +50,3 @@ audioBtn.addEventListener('click', function () {
         equalizer.classList.add('onplay');
     }
 });
-
-//изменения позиции цифр пагинации слайдера при перезаргузке в зависимости от ширины экрана
-let pag = document.querySelector('.header__pagination');
-let topArrow = document.querySelector('.header__prev');
-
-function getCoords(elem) { // кроме IE8-
-    let box = elem.getBoundingClientRect();
-
-    return {
-        top: box.top + pageYOffset,
-        left: box.left + pageXOffset
-    };
-}
-
-window.onload = function() {
-    if(!tablet) {
-        pag.style.top = getCoords(topArrow).top - 170 + 'px';
-    } else {
-        pag.style.top = getCoords(topArrow).top - 130 + 'px';
-    }
-};
