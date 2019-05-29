@@ -1,5 +1,88 @@
 .contact {
-    
+    padding-top: 103px;
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+    &__wrap {
+        display: flex;
+        margin-top: 44px;
+        justify-content: space-between;
+    }
+    &__list {
+        padding-top: 4px;
+    }
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        &_2 {
+            margin-top: 43px;
+        }
+    }
+    &__text {
+        width: 260px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        letter-spacing: .045em;
+        margin-bottom: 17px;
+        line-height: 1.3em;
+        font-size: 16px;
+        font-weight: 700;
+        span:first-child {
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        &_city {
+            margin-top: 14px;
+        }
+    }
+    &__inputs {
+        h3 {
+            text-align: center;
+            line-height: 1.3em;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 505px;
+        margin-top: 22px;
+    }
+    &__input {
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid #b0b0b0;
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 500;
+        &::placeholder {
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: .045em;
+        }
+        &_phone {
+            margin-top: 15px;
+        }
+    }
+    .btn_contact {
+        font-size: 16px;
+        font-weight: 700;
+        width: 100%;
+        letter-spacing: .045em;
+        margin-top: 20px;
+        height: 60px;
+    }
+}
+
+
+[class*="ymaps-2"][class*="-ground-pane"]{
+    filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter:grayscale(100%);
 }
 
 @media (max-width: 1219px) {
