@@ -20,7 +20,7 @@
   background-repeat:no-repeat ,repeat, repeat;
   background-position: center 220px, center center, center center;
   background-size: auto, cover, cover;
-  padding: 50px 0 160px;
+  padding: 50px 0 157px;
 
   &__top {
     display: flex;
@@ -119,13 +119,14 @@
     cursor: pointer;
     background: url('../img/prev-arr.png') no-repeat center center;
     position: absolute;
-    right: 0;
-    top: 122px;
+    right: 8px;
+    top: -40px;
   }
 
   &__next {
     background: url('../img/next-arr.png') no-repeat center center;
-    top: 252px;
+    top: 94px;
+    right: 10px;
   }
 
   &__logo {
@@ -386,20 +387,23 @@
     }
 
     &__next, &__prev {
-      top: 320px;
-      right: 50px;
+      top: -30px;
+      right: 0px;
       z-index: 3;
     }
 
     &__next {
-      right: 50px;
-      top: 400px;
+      right: 0px;
+      top: 90px;
     }
 
     &__pagination {
-      top: 335px;
+      top: 330px;
       right: 40px;
       z-index: 3;
+    }
+    &__center {
+      //flex-wrap: wrap-reverse;
     }
   }
 }
@@ -443,11 +447,6 @@
       left: 0;
       top: 0;
     }
-    &__next, &__prev {
-      top: 0;
-      right: -100px;
-      z-index: 3;
-    }
 
     &__bottom-row {
       justify-content: space-between;
@@ -455,19 +454,21 @@
     }
 
     &__next, &__prev {
-      top: 320px;
-      right: 50px;
+      top: -20px;
+      right: 23px;
       z-index: 3;
     }
 
     &__next {
-      right: 50px;
-      top: 400px;
+      right: 23px;
+      top: 80px;
     }
 
     &__pagination {
-      top: 335px;
-      right: 40px;
+      position: relative;
+      top: 40px;
+      right: 0;
+      width: 15%;
       z-index: 3;
     }
   }
@@ -475,19 +476,9 @@
 
 @media (max-width: 767px) {
   .header {
-    &__next, &__prev {
-      top: 320px;
-      right: 10px;
-      z-index: 3;
-    }
-
-    &__next {
-      right: 10px;
-      top: 400px;
-    }
 
     &__pagination {
-      right: 0;
+      right: -20px;
     }
   }
 }
@@ -519,22 +510,22 @@
 
     &__right-slider {
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     &__pagination {
-      right: 50%;
-      transform: translateX(50%);
-      top: 455px;
+      width: 25%;
+      margin: 0 auto;
+      top: 0;
     }
 
     &__prev {
-      right: 300px;
-      top: 492px;
+      right: 130px;
+      top: 37px;
     }
     &__next {
-      right: 110px;
-      top: 498px;
+      right: -55px;
+      top: 43px;
     }
 
     &__sticker {
@@ -563,14 +554,16 @@
         font-size: 34px;
       }
     }
-
+    &__pagination {
+      right: 0;
+    }
     &__prev {
-      right: 230px;
+      right: 90px;
     }
 
     &__next {
-      right: 30px;
-      top: 499px;
+      right: -58px;
+      top: 44px;
     }
 
     &__play-video {
