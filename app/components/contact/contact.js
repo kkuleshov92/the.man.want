@@ -1,5 +1,5 @@
-ymaps.ready(init);
-function init(){
+ymaps.ready(initMap);
+function initMap(){
     var myMap=new ymaps.Map("map",{
             center:[55.752141, 37.592411],
             zoom:11,
@@ -15,8 +15,8 @@ function init(){
     myMap.behaviors.disable('scrollZoom');
 }
 
-ymaps.ready(init2);
-function init2(){
+ymaps.ready(initMap2);
+function initMap2(){
     var myMap2=new ymaps.Map("map2",{
             center:[43.575651, 39.726709],
             zoom:11,
