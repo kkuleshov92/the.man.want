@@ -132,3 +132,35 @@ svg {
 	cursor: pointer;
 }
 
+::-webkit-input-placeholder {
+	opacity: 0.85;
+	color: #141414;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1.5px;
+}
+::-moz-placeholder {
+	opacity: 0.85;
+	color: #141414;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1px;
+}
+:-moz-placeholder {
+	opacity: 0.85;
+	color: #141414;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1px;
+}
+:-ms-input-placeholder {
+	opacity: 0.85;
+	color: #141414;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1px;
+}
