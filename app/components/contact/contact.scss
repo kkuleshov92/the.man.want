@@ -88,13 +88,54 @@
 @media (max-width: 1279px) {
     .contact {
         &__form {
-
+            width: 405px;
+        }
+        #map,
+        #map2,
+        .ymaps-2-1-73-map {
+            width: 300px !important;
+        }
+        &__text {
+            width: 230px;
+        }
+        h3 {
+            font-size: 22px;
+            br {
+                display: none;
+            }
+        }
+        &__inputs {
+            h3 {
+                width: 405px;
+            }
         }
     }
 }
 
 @media (max-width: 1023px) {
-
+    .contact {
+        .title {
+            text-align: center;
+        }
+        &__wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text {
+            width: 280px;
+        }
+        &__item {
+            justify-content: space-between;
+        }
+        #map,
+        #map2,
+        .ymaps-2-1-73-map {
+            width: 450px !important;
+        }
+        &__inputs {
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
