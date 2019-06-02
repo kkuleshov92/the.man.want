@@ -38,15 +38,15 @@ $('.header__right-slider').slick({
     nextArrow: $('.header__next')
 });
 
-let audioBtn = document.querySelector('.play-audio'),
-    equalizer = document.querySelector('.audio-equalizer');
-
-audioBtn.addEventListener('click', function () {
-    if(equalizer.classList.contains('onplay')){
-        audioBtn.innerHTML = 'ВКЛ.';
-        equalizer.classList.remove('onplay');
-    } else {
-        audioBtn.innerHTML = 'ВЫКЛ.';
-        equalizer.classList.add('onplay');
-    }
-});
+// let audioBtn = document.querySelector('.play-audio'),
+//     equalizer = document.querySelector('.audio-equalizer');
+//
+// audioBtn.addEventListener('click', function () {
+//     if(equalizer.classList.contains('onplay')){
+//         audioBtn.innerHTML = 'ВКЛ.';
+//         equalizer.classList.remove('onplay');
+//     } else {
+//         audioBtn.innerHTML = 'ВЫКЛ.';
+//         equalizer.classList.add('onplay');
+//     }
+// });
