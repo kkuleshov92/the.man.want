@@ -21,6 +21,7 @@
     &__top {
         display: flex;
         position: relative;
+        padding-bottom: 17px;
     }
     &__item {
         flex-direction: column;
@@ -87,25 +88,142 @@
         display: flex;
         justify-content: space-between;
         border-top: 1px solid #333335;
+        font-size: 14px;
+        padding-top: 39px;
+        letter-spacing: .045em;
+        padding-bottom: 30px;
+    }
+    &__name-site {
+        font-weight: 500;
+    }
+    &__all-rights {
+        margin-top: 10px;
+    }
+    &__Men {
+        text-transform: uppercase;
+        letter-spacing: .26em;
+    }
+    &__creator {
+        margin: -7px 210px 0 0;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #8e8e8f;
+    }
+    &__made {
+        margin-right: 21px;
     }
 }
 
 @media (max-width: 1279px) {
-
+    .footer {
+        &__item {
+            &_1 {
+                margin-right: 80px;
+            }
+            &_2,
+            &_3 {
+                margin-right: 60px;
+            }
+        }
+        &__link-tel {
+            width: 195px;
+        }
+        &__creator {
+            margin: 0;
+        }
+    }
 }
 
 @media (max-width: 1023px) {
-
+    .footer {
+        &__top {
+            flex-wrap: wrap;
+        }
+        &__link {
+            margin-bottom: 20px;
+        }
+        &__sublink {
+            margin-bottom: 15px;
+        }
+        &__item {
+            &_1 {
+                margin-right: 40px;
+            }
+            &_2,
+            &_3 {
+                margin-right: 40px;
+            }
+        }
+        &__contact {
+            font-size: 16px;
+            margin-bottom: 20px;
+            &_1 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        &__link-tel {
+            width: 170px;
+        }
+        &__tel-text_order {
+            margin-top: 10px;
+        }
+        &__bottom {
+            padding-bottom: 0;
+        }
+        &__contact_icons {
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
-
+    .footer {
+        &__top {
+            flex-direction: column;
+        }
+        &__item {
+            &:not(&_1){
+                margin-top: 0px;
+            }
+            &_2 {
+                padding-top: 20px;
+            }
+            &_4 {
+                position: absolute;
+                right: 50px;
+                top: 55px;
+            }
+        }
+    }
 }
 
 @media (max-width: 639px) {
-
+    .footer {
+        &__item {
+            &_4 {
+                right: 0;
+            }
+        }
+        &__bottom,
+        &__creator {
+            font-size: 12px;
+        }
+    }
 }
 
 @media (max-width: 479px) {
-
+    .footer {
+        &__item {
+            &_3 {
+                margin-bottom: 20px;
+            }
+            &_4 {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+    }
 }
