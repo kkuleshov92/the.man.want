@@ -39,12 +39,20 @@
             margin-right: 112px;
         }
         &_3 {
-            margin-right: 55px;
+            margin-right: 78px;
         }
     }
-    &__link-tel {
-        font-size: 18px;
+    &__contact {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 33px;
         font-weight: 500;
+        font-size: 18px;
+        letter-spacing: .05em;
+    }
+    &__link-tel {
+        width: 189px;
+        display: block;
     }
     &__tel-text {
         font-size: 13px;

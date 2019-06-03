@@ -1,5 +1,4 @@
-if(document.querySelector('contact__map')) { //проверяет есть ли элемент на странице
-    console.log(!document.getElementById('map'));
+if(document.querySelector('.contact__map') != null) { //проверяет есть ли элемент на странице
 
     ymaps.ready(initMap);
 
@@ -11,7 +10,7 @@ if(document.querySelector('contact__map')) { //проверяет есть ли 
             }),
             Placemark1 = new ymaps.Placemark([55.752141, 37.592411], {
                 balloonContent: 'Балун 1',
-                hintContent: 'Стандартный значок метки 1',
+                hintContent: 'Стандартный значок метки 1'
             }, {
                 preset: 'islands#redDotIcon'
             });
@@ -29,7 +28,7 @@ if(document.querySelector('contact__map')) { //проверяет есть ли 
             }),
             Placemark2 = new ymaps.Placemark([43.575651, 39.726709], {
                 balloonContent: 'Балун 1',
-                hintContent: 'Стандартный значок метки 1',
+                hintContent: 'Стандартный значок метки 1'
             }, {
                 preset: 'islands#redDotIcon'
             });
