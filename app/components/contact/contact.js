@@ -1,4 +1,5 @@
-if(document.getElementById('map') != null) { //проверяет есть ли элемент на странице
+if(document.querySelector('contact__map')) { //проверяет есть ли элемент на странице
+    console.log(!document.getElementById('map'));
 
     ymaps.ready(initMap);
 
