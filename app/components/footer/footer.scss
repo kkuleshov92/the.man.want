@@ -20,6 +20,7 @@
     }
     &__top {
         display: flex;
+        position: relative;
     }
     &__item {
         flex-direction: column;
@@ -42,6 +43,10 @@
             margin-right: 78px;
         }
     }
+    &__tel-text_order:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
     &__contact {
         display: flex;
         align-items: flex-end;
@@ -49,6 +54,12 @@
         font-weight: 500;
         font-size: 18px;
         letter-spacing: .05em;
+        &_icons {
+            margin-top: 28px;
+            width: 157px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &__link-tel {
         width: 189px;
@@ -57,6 +68,25 @@
     &__tel-text {
         font-size: 13px;
         color: #909090;
+    }
+    &__btn-top {
+        width: 42px;
+        height: 42px;
+        background: url(../img/footer-arrow.png) no-repeat center center;
+        cursor: pointer;
+        border: 2px solid $mainColor;
+        transition: all .2s linear;
+        display: block;
+        position: absolute;
+        right: 0;
+        &:hover {
+            background-color: #fff;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #333335;
     }
 }
 
