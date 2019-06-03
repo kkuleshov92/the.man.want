@@ -1,5 +1,27 @@
 <!--VIDEO START-->
-<div class="video">
+<div class="video-wrap">
+        <div class="video-top">
+            <div class="video-logo pointer">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="video-close menu__close pointer">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
 
+        <div class="video-controls">
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+
+            <div class="video-btns">
+                <button id="play" class="active-control"><i class="fas fa-play"></i></button>
+                <button id="stop"><i class="fas fa-pause"></i></button>
+            </div>
+            <p class="video-time">
+                <span class="video-minutes">0</span>:<span class="video-seconds">00</span> / <span class="video-duration"></span>
+            </p>
+        </div>
+        <video id="video" src="video/videoplayback.mp4" poster="img/video-poster.jpg"></video>
 </div>
 <!--VIDEO END-->

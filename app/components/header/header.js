@@ -38,15 +38,33 @@ $('.header__right-slider').slick({
     nextArrow: $('.header__next')
 });
 
-let audioBtn = document.querySelector('.play-audio'),
-    equalizer = document.querySelector('.audio-equalizer');
 
-audioBtn.addEventListener('click', function () {
-    if(equalizer.classList.contains('onplay')){
-        audioBtn.innerHTML = 'ВКЛ.';
-        equalizer.classList.remove('onplay');
-    } else {
-        audioBtn.innerHTML = 'ВЫКЛ.';
-        equalizer.classList.add('onplay');
-    }
+//audio controls
+if(document.querySelector('.play-audio') != null) {
+
+    let audioBtn = document.querySelector('.play-audio'),
+        equalizer = document.querySelector('.audio-equalizer'),
+        audio = document.querySelector('audio');
+
+    audioBtn.addEventListener('click', function () {
+        if (equalizer.classList.contains('onplay')) {
+            audioBtn.innerHTML = 'ВКЛ.';
+            equalizer.classList.remove('onplay');
+            audio.pause();
+        } else {
+            audioBtn.innerHTML = 'ВЫКЛ.';
+            equalizer.classList.add('onplay');
+            audio.play();
+        }
+    });
+
+}
+
+//scroll to anchor
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+    return false;
 });

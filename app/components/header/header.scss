@@ -22,13 +22,6 @@
   background-size: auto, cover, cover;
   padding: 50px 0 157px;
 
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 123px;
-  }
-
   &__center {
     display: flex;
     position: relative;
@@ -135,25 +128,6 @@
     flex-basis: 70%;
   }
 
-  &__tel {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    flex-basis: 15%;
-    letter-spacing: 0.72px;
-    text-align: right;
-    position: relative;
-    top: 3px;
-
-    span {
-      color: #9d9d9d;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.58px;
-    }
-  }
-
   &__menu-btn {
   }
 
@@ -239,6 +213,7 @@
     width: 100px;
     height: 20px;
     align-items: flex-end;
+    line-height: .7;
 
     audio {
       display: none;
@@ -374,9 +349,6 @@
     padding: 50px 0 80px;
     background-position: center 150px,center center,center center;
 
-    &__top {
-      margin-bottom: 70px;
-    }
 
     &__bottom-row {
       margin-bottom: 60px;

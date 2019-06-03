@@ -1,6 +1,6 @@
 let subMenuBtn = document.querySelector('.submenu-btn'),
     submenu = document.querySelector('.menu__services'),
-    openMenuBtn = document.querySelector('.header__menu-btn'),
+    openMenuBtn = document.querySelector('.header-top__menu-btn'),
     closeMenuBtn = document.querySelector('.menu__close'),
     menu = document.querySelector('.menu');
 
