@@ -213,6 +213,7 @@
     width: 100px;
     height: 20px;
     align-items: flex-end;
+    line-height: .7;
 
     audio {
       display: none;
@@ -457,6 +458,16 @@
 @media (max-width: 639px) {
   .header {
 
+    &__logo {
+      flex-basis: 20%;
+    }
+    &__tel {
+      flex-basis: 50%;
+    }
+
+    &__top {
+      margin-bottom: 40px;
+    }
 
     &__title {
       h1 {

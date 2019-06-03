@@ -117,14 +117,19 @@ svg {
 	color: #000;
 	background: $mainColor;
 	height: 55px;
-	line-height: 55px;
+	line-height: 50px;
 	cursor: pointer;
 	width: 170px;
 	text-align: center;
 	font-weight: 600;
+	box-sizing: border-box;
 	text-transform: uppercase;
+	border: 1px solid transparent;
+	transition: all .3s ease;
 	&:hover {
-		transition: all .3s ease;
+		background: transparent;
+		color: $mainColor;
+		border: 1px solid $mainColor;
 	}
 }
 

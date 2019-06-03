@@ -1,0 +1,114 @@
+.not-found {
+  background-color: #1c1c1e;
+  background-image: url(../img/404-fog.png);
+  background-repeat: repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  .header-top {
+    margin-bottom: 93px;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    height: 54px;
+    line-height: 54px;
+    width: 190px;
+    letter-spacing: 0.63px;
+  }
+
+  &__title {
+    color: #d0944d;
+    font-family: 'Raleway-500';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 1.5px;
+    margin: 9px 0 12px;
+  }
+
+  &__descr {
+    color: #ffffff;
+    font-family: 'Raleway-500';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.63px;
+    padding: 0 400px;
+    margin-bottom: 43px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .not-found {
+
+    &__descr {
+      padding: 0 300px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .not-found {
+
+    .header-top {
+      margin-bottom: 50px;
+    }
+
+    &__descr {
+      padding: 0 150px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .not-found {
+
+    .header-top {
+      margin-bottom: 50px;
+    }
+
+    &__descr {
+      padding: 0 120px;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .not-found {
+
+    .header-top {
+      margin-bottom: 50px;
+    }
+
+    &__descr {
+      padding: 0 40px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .not-found {
+
+    .header-top {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    &__descr {
+      padding: 0;
+      line-height: 1.4;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+  }
+}
