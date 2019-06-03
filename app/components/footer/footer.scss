@@ -12,7 +12,6 @@
     }
     &__sublink {
         font-size: 14px;
-        width: 240px;
         margin-bottom: 28px;
         line-height: 1.75em;
     }
@@ -25,6 +24,7 @@
     &__item {
         flex-direction: column;
         display: flex;
+        align-items: flex-start;
         letter-spacing: .045em;
         a:hover {
             color: #d3964d;
