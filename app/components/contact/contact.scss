@@ -1,5 +1,6 @@
 .contact {
     padding-top: 103px;
+    padding-bottom: 123px;
     h3 {
         font-weight: 700;
         font-size: 24px;
@@ -21,6 +22,9 @@
     }
     &__text {
         width: 260px;
+        &_2 {
+            margin-top: 13px;
+        }
     }
     &__info {
         display: flex;
@@ -58,12 +62,22 @@
         padding: 0 16px;
         font-size: 14px;
         font-weight: 500;
+        letter-spacing: .045em;
         &::placeholder {
             color: #4e4e4e;
             font-size: 14px;
             font-weight: 500;
             font-family: 'Montserrat', sans-serif;
             letter-spacing: .045em;
+            line-height: 45px;
+        }
+        &::-moz-placeholder {
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: .045em;
+            line-height: 45px;
         }
         &_phone {
             margin-top: 15px;
