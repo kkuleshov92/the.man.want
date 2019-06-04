@@ -517,6 +517,7 @@
 @media (max-width: 479px) {
   .header {
     padding: 20px 0!important;
+    background-size: contain, cover, cover;
     &__tel {
       display: none;
     }

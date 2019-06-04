@@ -16,13 +16,12 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1170px;
+  max-width: 1241px;
   position: absolute;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  padding: 0 10px;
 }
 .video-close {
 
@@ -67,11 +66,15 @@ video {
   text-align: center;
   color: #fff;
   z-index: 10;
-  padding: 0 60px;
 }
 .video-time {
+  width: 100%;
+  max-width: 1241px;
+  text-align: left;
+  margin: 0 auto;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 80px;
 }
 .progress {
@@ -86,10 +89,66 @@ video {
   transform: translateX(-50%);
 }
 .progress-value {
-  width: 0;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1241px;
   height: 4px;
   background: #d3964d;
   position: relative;
   top: -1px;
+}
+
+@media (max-width: 1279px) {
+  .video-top {
+    max-width: 994px;
+  }
+  .video-time {
+    max-width: 994px;
+    bottom: 60px;
+  }
+  .progress {
+    max-width: 994px;
+    bottom: 50px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .video-top {
+    max-width: 737px;
+    top: 20px;
+  }
+  .video-time {
+    max-width: 737px;
+    bottom: 40px;
+  }
+  .progress {
+    max-width: 737px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-top {
+    max-width: 610px;
+    top: 10px;
+  }
+  .video-time {
+    max-width: 610px;
+    bottom: 30px;
+  }
+  .progress {
+    max-width: 610px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 639px) {
+  .video-top, .video-time, .progress {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 479px) {
+  .video-top, .video-time, .progress {
+    max-width: 300px;
+  }
 }
