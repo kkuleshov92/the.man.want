@@ -61,7 +61,7 @@ if(document.querySelector('.play-audio') != null) {
 }
 
 //scroll to anchor
-var $page = $('html, body');
+let $page = $('html, body');
 $('a[href*="#"]').click(function() {
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
