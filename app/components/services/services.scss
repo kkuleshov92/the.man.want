@@ -28,6 +28,7 @@
         display: flex;
         flex-direction: column;
         box-shadow: 1px 1px 1px rgba(0,0,0,.1), -1px 1px 1px rgba(0,0,0,.1);
+        position: relative;
         h3 {
             font-weight: 700;
             font-size: 24px;
@@ -47,6 +48,76 @@
     .btn_services {
         margin: auto auto 0;
     }
+    &__item_hover {
+        display: none;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #000 url(../img/hover-order-card.png) no-repeat center center / cover;
+        color: #fff;
+        width: 460px;
+        padding: 30px 30px 50px;
+        z-index: 1;
+        h4 {
+            font-weight: 700;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        >p {
+            text-align: left;
+            padding-right: 20px;
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+    &__order-vars {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__var {
+        display: flex;
+        align-items: center;
+        >p {
+            margin-top: 0;
+            font-weight: 300;
+            font-size: 18px;
+            text-align: left;
+            span {
+                font-weight: 700;
+            }
+        }
+        >p:first-child {
+            min-width: 105px;
+        }
+        >p:nth-child(2) {
+            min-width: 145px;
+        }
+        &_2 {
+            margin-top: 14px;
+        }
+    }
+    &__link-more {
+        color: #a9a9a9;
+        text-transform: uppercase;
+        margin-top: 40px;
+        font-size: 12px;
+        position: relative;
+        letter-spacing: .045em;
+        &:hover {
+            text-decoration: underline;
+        }
+        &::before {
+            width: 30px;
+            height: 12px;
+            background: url(../img/services__card-arrow.png)no-repeat center center;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 1px;
+            right: -85px;
+        }
+    }
 }
 
 @media (max-width: 1279px) {
@@ -61,6 +132,42 @@
                 font-size: 20px;
             }
             p {
+            }
+        }
+        &__item_hover {
+            width: 320px;
+        }
+        &__order-vars {
+            margin-top: 20px;
+        }
+        &__item_hover {
+            h4 {
+                text-align: center;
+            }
+            >p {
+                text-align: center;
+                padding-right: 0;
+            }
+        }
+        &__var {
+            flex-wrap: wrap;
+            justify-content: center;
+            >p {
+                text-align: center;
+            }
+            .btn_services_in {
+                margin-top: 10px;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+        &__link-more {
+            display: block;
+            text-align: center;
+            padding-right: 40px;
+            &::before {
+                right: 50px;
+                top: 0;
             }
         }
     }
@@ -82,6 +189,9 @@
             &_last {
                 margin-bottom: 0;
             }
+        }
+        &__item_hover {
+            display: none !important;
         }
     }
 }
