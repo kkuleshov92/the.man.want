@@ -1,4 +1,4 @@
-.services {
+.favor {
     padding: 90px 0 96px;
     &__text {
         font-size: 52px;
@@ -45,7 +45,7 @@
             line-height: 26px;
         }
     }
-    .btn_services {
+    .btn_favor {
         margin: auto auto 0;
     }
     &__item_hover {
@@ -110,7 +110,7 @@
         &::before {
             width: 30px;
             height: 12px;
-            background: url(../img/services__card-arrow.png)no-repeat center center;
+            background: url(../img/favor__card-arrow.png)no-repeat center center;
             content: '';
             display: block;
             position: absolute;
@@ -121,7 +121,7 @@
 }
 
 @media (max-width: 1279px) {
-    .services {
+    .favor {
         &__text {
             font-size: 48px;
         }
@@ -155,7 +155,7 @@
             >p {
                 text-align: center;
             }
-            .btn_services_in {
+            .btn_favor_in {
                 margin-top: 10px;
                 height: 35px;
                 line-height: 35px;
@@ -174,7 +174,7 @@
 }
 
 @media (max-width: 1023px) {
-    .services {
+    .favor {
         &__text {
             font-size: 44px;
         }
@@ -197,7 +197,7 @@
 }
 
 @media (max-width: 767px) {
-    .services {
+    .favor {
         &__item {
             margin: 15px 0;
             width: auto;
@@ -210,7 +210,7 @@
         &__list {
             margin-top: 0;
         }
-        .btn_services {
+        .btn_favor {
             margin-top: 20px;
         }
         &__text {
@@ -226,7 +226,7 @@
 }
 
 @media (max-width: 639px) {
-    .services {
+    .favor {
         &__text {
             font-size: 32px;
         }
@@ -234,7 +234,7 @@
 }
 
 @media (max-width: 479px) {
-    .services {
+    .favor {
         &__text {
             font-size: 26px;
         }
