@@ -1,0 +1,65 @@
+.page-header {
+  background: #0c0c0c;
+  padding-bottom: 105px;
+
+  &__title {
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__description {
+    p:first-child {
+      padding: 0;
+      margin-bottom: 98px;
+    }
+  }
+
+  .header-top {
+    margin-bottom: 99px;
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    left: 105px;
+    z-index: 1;
+  }
+
+  &__left {
+    width: 30%;
+    padding: 75px 0 0;
+  }
+  &__right {
+    width: 70%;
+    position: relative;
+    left: 133px;
+  }
+  &__img {
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .25);
+    position: absolute;
+    height: 527px;
+
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bg-text {
+    color: #161616;
+    font-family: "Raleway-800";
+    font-size: 200px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 9px;
+    opacity: .5;
+    position: absolute;
+    z-index: -1;
+    top: 115px;
+    left: -175px;
+  }
+}
