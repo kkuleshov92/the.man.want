@@ -1,5 +1,48 @@
 .manager {
-
+    padding-top: 93px;
+    background: url(../img/manager-img.png)no-repeat left calc(50% - 370px) bottom;
+    .container {
+        display: flex;
+    }
+    &__left {
+        min-width: 526px;
+    }
+    &__right {
+        padding-top: 5px;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 1.62px;
+        color: #0f0f0f;
+        font-family: 'Raleway-800', sans-serif;
+        padding-left: 104px;
+    }
+    .manager__content {
+        margin-top: -23px;
+        margin-right: 100px;
+        padding-bottom: 45px;
+        border-bottom: 1px solid #DADADA;
+        p {
+            font-size: 14px;
+            color: #191919;
+            line-height: 22px;
+            letter-spacing: 0.6px;
+            margin-top: 22px;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+    blockquote {
+        line-height: 1.75;
+        letter-spacing: 1.1px;
+        color: #0f0f0f;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 101px;
+        width: 610px;
+    }
 }
 
 @media (max-width: 1279px) {
