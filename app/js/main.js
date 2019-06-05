@@ -3,6 +3,11 @@
 //=include ../components/footer/footer.js
 //=include ../components/header/header.js
 //=include ../components/insta/insta.js
+//=include ../components/about-header/about-header.js
+//=include ../components/slogan/slogan.js
+//=include ../components/team/team.js
+//=include ../components/experience/experience.js
+//=include ../components/manager/manager.js
 //=include ../components/legend/legend.js
 //=include ../components/menu/menu.js
 //=include ../components/offer/offer.js
