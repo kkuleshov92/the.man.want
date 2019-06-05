@@ -9,19 +9,18 @@
         </div>
         <form class="order__form">
             <div>
-                <div class="input-border"></div>
-                <div class="input-validate">Обязательное поле для заполнения</div>
-                <input type="text" placeholder="Ваше Имя*">
+                <span class="input-validate">Обязательное поле для заполнения</span>
+                <input class="if-empty" type="text" placeholder="Ваше Имя*">
             </div>
             <div>
-                <div class="input-border"></div>
-                <div class="input-validate">Обязательное поле для заполнения</div>
-                <input type="tel" placeholder="Ваш телефон*">
+                <span class="input-validate">Обязательное поле для заполнения</span>
+
+                <input class="if-empty" type="tel" placeholder="Ваш телефон*">
             </div>
             <div>
-                <div class="input-border"></div>
-                <div class="input-validate">Обязательное поле для заполнения</div>
-                <input type="email" placeholder="Ваш e-mail">
+                <span class="input-validate">Обязательное поле для заполнения</span>
+
+                <input class="if-empty" type="email" placeholder="Ваш e-mail">
             </div>
             <button class="btn order__btn">Заказать</button>
             <input type="checkbox" id="order__check" class="order__checkbox pointer">
