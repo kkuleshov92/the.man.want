@@ -1,5 +1,6 @@
 .manager {
     padding-top: 93px;
+    padding-bottom: 90px;
     background: url(../img/manager-img.png)no-repeat left calc(50% - 370px) bottom;
     .container {
         display: flex;
@@ -11,14 +12,13 @@
         padding-top: 5px;
     }
     h2 {
-        font-size: 36px;
         line-height: 42px;
         letter-spacing: 1.62px;
         color: #0f0f0f;
         font-family: 'Raleway-800', sans-serif;
         padding-left: 104px;
     }
-    .manager__content {
+    &__content {
         margin-top: -23px;
         margin-right: 100px;
         padding-bottom: 45px;
@@ -40,21 +40,94 @@
         color: #0f0f0f;
         font-size: 24px;
         font-weight: 700;
-        margin-top: 101px;
+        margin-top: 80px;
         width: 610px;
+    }
+    &__author {
+        display: flex;
+        margin-top: 12px;
+        align-items: flex-start;
+    }
+    &__text {
+        border-top: 1px solid #dadada;
+        width: 204px;
+        padding-top: 19px;
+        span {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.44;
+            letter-spacing: 0.8px;
+            color: #191919;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.57;
+            letter-spacing: 0.6px;
+            color: #989898;
+            margin-top: 12px;
+        }
+    }
+    &__sign {
+        width: 170px;
+        margin-left: 111px;
+        margin-top: 7px;
+        img {
+            width: 100%;
+        }
     }
 }
 
 @media (max-width: 1279px) {
-
+    .manager {
+        background: url(../img/manager-img.png) no-repeat left calc(50% - 280px) bottom;
+        &__left {
+            min-width: 450px;
+        }
+        blockquote {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 1023px) {
-
+    .manager {
+        background: none;
+        .container {
+            flex-direction: column;
+        }
+        &__left {
+            text-align: center;
+        }
+        h2 {
+            padding-left: 0;
+        }
+        &__right {
+            padding-top: 0;
+        }
+        &__content {
+            width: 100%;
+            margin: 0;
+            padding-bottom: 20px;
+        }
+        blockquote {
+            margin-top: 20px;
+            line-height: 1.4;
+            font-size: 20px;
+        }
+        &__sign {
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
-
+    .manager {
+        &__left {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
 }
 
 @media (max-width: 639px) {
@@ -62,5 +135,39 @@
 }
 
 @media (max-width: 479px) {
-
+    .manager {
+        h2 {
+            line-height: 1.1;
+        }
+        &__content {
+            padding-bottom: 10px;
+            p {
+                margin-top: 15px;
+            }
+        }
+        blockquote {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        &__sign {
+            margin-left: 20px;
+        }
+        &__author {
+            flex-wrap: wrap;
+            margin-top: 10px;
+            span {
+                width: 200px;
+            }
+        }
+        &__text {
+            padding-top: 10px;
+            p {
+                margin-right: 0;
+            }
+        }
+        &__sign {
+            width: 96px;
+            margin-left: 0;
+        }
+    }
 }
