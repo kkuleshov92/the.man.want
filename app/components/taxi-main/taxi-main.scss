@@ -267,3 +267,112 @@
     justify-content: space-between;
   }
 }
+
+
+@media (max-width: 1023px) {
+  .taxi-main {
+    .back-link, .forward-link {
+
+      a {
+        font-size: 16px;
+        letter-spacing: 1.2px;
+      }
+    }
+
+    &__lists {
+      margin-top: 20px;
+    }
+
+    &__list {
+      margin-bottom: 0;
+
+      span {
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__content {
+
+      p {
+        padding: 0;
+      }
+    }
+    .taxi-main__descr-bold {
+      padding-right: 0;
+    }
+    &__descr-list {
+      padding: 0;
+    }
+    .sublist__btn {
+      margin: 20px 0;
+    }
+    &__sublist {
+
+      p {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .taxi-main {
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .back-link, .forward-link {
+      a {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+    }
+    .back-link {
+      margin-left: 70px;
+    }
+    .forward-link {
+      margin-right: 70px;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .taxi-main {
+
+    &__bottom {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .back-link, .forward-link {
+      position: relative;
+      width: 100%;
+      margin: 0 0 10px 0;
+
+      a {
+        display: block;
+        text-align: center;
+      }
+    }
+    .back-link {
+      &::before {
+        left: 70px;
+      }
+    }
+    .forward-link {
+      &::before {
+        right: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+
+}

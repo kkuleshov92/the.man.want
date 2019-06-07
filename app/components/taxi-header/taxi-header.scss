@@ -12,3 +12,44 @@
     left: -70px;
   }
 }
+
+@media (max-width: 1279px) {
+  .taxi-header {
+
+    .header-top {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .taxi-header {
+
+    .page-header__bg-text {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 130px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 639px) {
+  .taxi-header {
+
+    .page-header__bg-text {
+      font-size: 80px;
+    }
+    .header-top {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+
+}
