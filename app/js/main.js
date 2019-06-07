@@ -16,4 +16,5 @@
 //=include ../components/reviews/reviews.js
 //=include ../components/favor/favor.js
 //=include ../components/video/video.js
+//=include ../components/taxi-main/taxi-main.js
 //=include ../components/services-categories/services-categories.js
