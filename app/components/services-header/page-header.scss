@@ -3,7 +3,6 @@
   max-height: 650px;
 
 
-
   &__title {
 
     h1 {
@@ -37,8 +36,8 @@
   &__right {
     width: 820px;
     position: absolute;
-    //right: -190px;
-    right: 0;
+    top: 0;
+    right: -190px;
   }
 
   &__bg-text {
@@ -58,7 +57,6 @@
 
 @media (max-width: 1279px) {
   .page-header {
-
   }
 }
 
