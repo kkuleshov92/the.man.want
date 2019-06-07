@@ -112,7 +112,7 @@
     color: #000000;
     font-size: 16px;
     font-weight: 600;
-    line-height: 22px;
+    line-height: 55px;
     text-transform: uppercase;
     letter-spacing: 0.72px;
     margin: 44px 0 50px;
@@ -339,6 +339,10 @@
     .forward-link {
       margin-right: 70px;
     }
+
+    .taxi-main__sublist-img {
+      top: 0;
+    }
   }
 }
 
@@ -374,5 +378,38 @@
 }
 
 @media (max-width: 479px) {
+  .taxi-main {
 
+    .back-link {
+
+       &::before {
+         left: 0;
+       }
+     }
+    .forward-link {
+
+      &::before {
+        right: 0;
+      }
+    }
+    .taxi-main__sublist-img {
+      width: 100%;
+      left: 40px;
+    }
+
+    .sublist__btn {
+      width: 100%;
+    }
+
+    &__list {
+
+      span {
+        font-size: 22px;
+      }
+
+      .fas {
+        font-size: 18px;
+      }
+    }
+  }
 }

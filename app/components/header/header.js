@@ -42,7 +42,7 @@ $('.header__right-slider').slick({
 //audio controls
 if(document.querySelector('.play-audio') != null) {
 
-    if ((document.cookie.indexOf('playerOn') == -1) && (document.cookie.indexOf('playerOff')) == -1) {
+    if ((document.cookie.indexOf('playerOn') === -1) && (document.cookie.indexOf('playerOff')) === -1) {
         $('.cookies').fadeIn();
     }
 
