@@ -42,23 +42,41 @@ $('.header__right-slider').slick({
 //audio controls
 if(document.querySelector('.play-audio') != null) {
 
+    if ((document.cookie.indexOf('playerOn') == -1) && (document.cookie.indexOf('playerOff')) == -1) {
+        $('.cookies').fadeIn();
+    }
+
     let audioBtn = document.querySelector('.play-audio'),
         equalizer = document.querySelector('.audio-equalizer'),
         audio = document.querySelector('audio');
+
+    if(document.cookie.indexOf('playerOn') > 0) {
+        audioBtn.innerHTML = 'ВЫКЛ.';
+        equalizer.classList.add('onplay');
+        audio.play();
+    } else {
+        audioBtn.innerHTML = 'ВКЛ.';
+        equalizer.classList.remove('onplay');
+        audio.pause();
+    }
 
     audioBtn.addEventListener('click', function () {
         if (equalizer.classList.contains('onplay')) {
             audioBtn.innerHTML = 'ВКЛ.';
             equalizer.classList.remove('onplay');
             audio.pause();
+            setCookieOff();
         } else {
             audioBtn.innerHTML = 'ВЫКЛ.';
             equalizer.classList.add('onplay');
             audio.play();
+            setCookieOn();
         }
     });
-
 }
+
+
+
 
 //scroll to anchor
 let $page = $('html, body');

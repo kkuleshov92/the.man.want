@@ -18,3 +18,4 @@
 //=include ../components/video/video.js
 //=include ../components/taxi-main/taxi-main.js
 //=include ../components/services-categories/services-categories.js
+//=include ../components/cookies/cookies.js
