@@ -1,9 +1,9 @@
 function setCookieOn() {
-    document.cookie = "status=playerOn"
+    document.cookie = "status=playerOn";
 }
 
 function setCookieOff() {
-    document.cookie = "status=playerOff"
+    document.cookie = "status=playerOff";
 }
 
 $('.btn_cookies').click(function () {
