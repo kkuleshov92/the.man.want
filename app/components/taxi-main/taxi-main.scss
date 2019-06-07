@@ -81,11 +81,15 @@
       font-weight: 400;
       line-height: 42px;
       letter-spacing: 1.62px;
+      position: relative;
+      z-index: 5;
     }
 
     i {
       color: #fff;
       opacity: 0.6;
+      position: relative;
+      z-index: 5;
     }
 
     &:hover {
@@ -123,9 +127,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, .07);
     position: relative;
     z-index: 1;
-    transition: 1s;
     display: block;
-
 
     &-img {
       position: absolute;
@@ -176,6 +178,7 @@
         left: 2px;
       }
     }
+
     &_hidden {
       display: none;
     }
