@@ -46,19 +46,33 @@ if(document.querySelector('.play-audio') != null) {
         equalizer = document.querySelector('.audio-equalizer'),
         audio = document.querySelector('audio');
 
+    if(document.cookie.indexOf('playerOn')) {
+        audioBtn.innerHTML = 'ВЫКЛ.';
+        equalizer.classList.add('onplay');
+        audio.play();
+    } else {
+        audioBtn.innerHTML = 'ВКЛ.';
+        equalizer.classList.remove('onplay');
+        audio.pause();
+    }
+
     audioBtn.addEventListener('click', function () {
         if (equalizer.classList.contains('onplay')) {
             audioBtn.innerHTML = 'ВКЛ.';
             equalizer.classList.remove('onplay');
             audio.pause();
+            setCookieOff();
         } else {
             audioBtn.innerHTML = 'ВЫКЛ.';
             equalizer.classList.add('onplay');
             audio.play();
+            setCookieOn();
         }
     });
-
 }
+
+
+
 
 //scroll to anchor
 let $page = $('html, body');
