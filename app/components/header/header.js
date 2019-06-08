@@ -4,23 +4,28 @@ let leftPagin = $(".header__pagination-left");
 let rightPagin = $(".header__pagination-right");
 let line = $('.line-inner');
 
+
+
 $(".header__right-slider").on("init", function(event, slick){
     $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1) + ''));
     $(rightPagin).text(String('/0' + parseInt(slick.slideCount)));
+    $(line).addClass('blink');
+});
+$(document).ready(function () {
+
+    $(".header__right-slider").on("afterChange", function(event, slick, currentSlide){
+        $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1)) + '');
+        $(rightPagin).text(String('/0' + slick.slideCount));
+    });
+
+    $('.header__left-slider').on('beforeChange', function () {
+        $(line).css("animation", 'null');
+        setTimeout(function(){
+            $(line).css("animation", 'line 7.1s linear infinite');
+        }, 500);
+    });
 });
 
-
-$(".header__right-slider").on("afterChange", function(event, slick, currentSlide){
-    $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1)) + '');
-    $(rightPagin).text(String('/0' + slick.slideCount));
-});
-
-$('.header__left-slider').on('beforeChange', function () {
-    $(line).css("animation", 'null');
-    setTimeout(function(){
-        $(line).css("animation", 'line 7.1s linear infinite');
-    }, 500);
-});
 
 $('.header__left-slider').slick({
     slidesToShow: 1,
