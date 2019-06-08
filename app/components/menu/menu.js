@@ -4,10 +4,10 @@ let subMenuBtn = document.querySelector('.submenu-btn'),
     closeMenuBtn = document.querySelector('.menu__close'),
     menu = document.querySelector('.menu');
 
-subMenuBtn.addEventListener('click', function () {
-    submenu.classList.toggle('submenu-active');
-    subMenuBtn.classList.toggle('submenu-active-btn');
-});
+// subMenuBtn.addEventListener('click', function () {
+//     submenu.classList.toggle('submenu-active');
+//     subMenuBtn.classList.toggle('submenu-active-btn');
+// });
 
 openMenuBtn.addEventListener('click', function(){
     menu.classList.add('menu-active');

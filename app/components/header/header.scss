@@ -16,11 +16,31 @@
 }
 .header {
   background-color: #1c1c1e;
-  background-image: url("../img/gtr-bg.png"),url("../img/header-fog.png"), url("../img/header-bg.jpg");
-  background-repeat:no-repeat ,repeat, repeat;
-  background-position: center 220px, center center, center center;
-  background-size: auto, cover, cover;
+  background-image: url("../img/header-fog.png"), url("../img/header-bg.jpg");
+  background-repeat:repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
   padding: 50px 0 157px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: 'GTR';
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #161616;
+    font-size: 200px;
+    font-weight: 900;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 60px;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
 
   &__center {
     display: flex;
@@ -98,11 +118,22 @@
     margin-top: -6px;
 
     .line-inner {
-      max-width: 2%;
+      width: 0;
       height: 1px;
       background: #d3964d;
       opacity: 1;
-      transition: .5s ease;
+      animation: line 7.1s linear;
+    }
+    .blink {
+    }
+  }
+
+  @keyframes line {
+    0% {
+      width: 1%;
+    }
+    100% {
+      width: 100%;
     }
   }
 
@@ -128,8 +159,6 @@
     flex-basis: 70%;
   }
 
-  &__menu-btn {
-  }
 
   &__title {
 
@@ -347,7 +376,7 @@
 @media (max-width: 1279px) {
   .header {
     padding: 50px 0 80px;
-    background-position: center 150px,center center,center center;
+    background-position: center center,center center;
 
 
     &__bottom-row {
@@ -458,6 +487,11 @@
 @media (max-width: 639px) {
   .header {
 
+    &::after {
+      font-size: 110px;
+      letter-spacing: 0;
+    }
+
     &__logo {
       flex-basis: 20%;
     }
@@ -517,7 +551,7 @@
 @media (max-width: 479px) {
   .header {
     padding: 20px 0!important;
-    background-size: contain, cover, cover;
+    background-size: cover, cover;
     &__tel {
       display: none;
     }

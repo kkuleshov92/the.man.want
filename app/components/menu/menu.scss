@@ -110,17 +110,18 @@
       }
     }
   }
-
+  .submenu-btn:hover > .menu__services{
+    display: block;
+  }
   &__tel {
     margin-bottom: 35px;
 
-    p {
+    a {
       font-size: 25px;
-
     }
 
     a {
-      color: #9d9d9d;
+      //color: #9d9d9d;
     }
 
     .tel-moscow {

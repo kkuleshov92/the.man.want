@@ -7,7 +7,8 @@ if(document.querySelector('.order_car')) {
         carPopup = document.querySelector('.order_car'),
         consultPopup = document.querySelector('.order_consult'),
         innerCarPop = document.querySelector('.car-wrap'),
-        innerConsPop = document.querySelector('.consult-wrap');
+        innerConsPop = document.querySelector('.consult-wrap'),
+        popupTitle = document.querySelector('.order__title');
 
 //click on outer of popup area
     carPopup.addEventListener('click', function (e) {
@@ -17,17 +18,12 @@ if(document.querySelector('.order_car')) {
         }
     });
 
-    consultPopup.addEventListener('click', function (e) {
-        if (!innerConsPop.contains(e.target)) {
-            consultPopup.classList.remove('opened');
-            document.body.style.overflow = '';
-        }
-    });
 
 //open car pop
     openCarBtn.forEach(function (el) {
         el.addEventListener('click', function () {
             carPopup.classList.add('opened');
+            popupTitle.querySelector('h3').innerHTML = 'Заполните форму для бронирования автомобиля';
             document.body.style.overflow = 'hidden';
         });
     });
@@ -40,14 +36,11 @@ if(document.querySelector('.order_car')) {
 //open consult pop
     openConsultBtn.forEach(function (el) {
         el.addEventListener('click', function () {
-            consultPopup.classList.add('opened');
+            carPopup.classList.add('opened');
+            popupTitle.querySelector('h3').innerHTML = 'Заполните форму, наши сецмалисты предоставят Вам консультацию в ближайшее время!';
             document.body.style.overflow = 'hidden';
         });
     });
-//close consult pop
-    closeConsultBtn.addEventListener('click', function () {
-        consultPopup.classList.remove('opened');
-        document.body.style.overflow = '';
-    });
+
 
 }
