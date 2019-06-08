@@ -38,27 +38,57 @@ $('.header__right-slider').slick({
     nextArrow: $('.header__next')
 });
 
+var date = new Date(new Date().getTime() + 31104000 * 1000);
+
+$('.btn_cookies').click(function(){
+    $('.cookies').fadeOut();
+    document.cookie = "cookie=1;expires=" + date.toUTCString();
+});
+
+function setCookieOn() {
+    document.cookie = "status=1;expires=" + date.toUTCString();
+}
+
+function setCookieOff() {
+    document.cookie = "status=0;expires=" + date.toUTCString();
+}
+
+function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
 
 //audio controls
 if(document.querySelector('.play-audio') != null) {
 
-    if ((document.cookie.indexOf('playerOn') === -1) && (document.cookie.indexOf('playerOff')) === -1) {
-        $('.cookies').fadeIn();
-    }
-
-    let audioBtn = document.querySelector('.play-audio'),
+    var audioBtn = document.querySelector('.play-audio'),
         equalizer = document.querySelector('.audio-equalizer'),
         audio = document.querySelector('audio');
 
-    if(document.cookie.indexOf('playerOn') > 0) {
-        audioBtn.innerHTML = 'ВЫКЛ.';
-        equalizer.classList.add('onplay');
-        audio.play();
-    } else {
-        audioBtn.innerHTML = 'ВКЛ.';
-        equalizer.classList.remove('onplay');
-        audio.pause();
+    setTimeout(checkStatus, 3000);
+
+
+    if ( !getCookie( "cookie" ) ) {
+        $('.cookies').fadeIn();
     }
+
+    function checkStatus() {
+        if((!getCookie("status")) || (getCookie("status") == 1)) {
+            audioBtn.innerHTML = 'ВЫКЛ.';
+            equalizer.classList.add('onplay');
+            audio.play();
+        } else if (getCookie("status") == 0) {
+            audioBtn.innerHTML = 'ВКЛ.';
+            equalizer.classList.remove('onplay');
+            audio.pause();
+        }
+        console.log('go!');
+    }
+
+
+
 
     audioBtn.addEventListener('click', function () {
         if (equalizer.classList.contains('onplay')) {

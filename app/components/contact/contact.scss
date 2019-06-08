@@ -34,6 +34,13 @@
         line-height: 1.3em;
         font-size: 16px;
         font-weight: 700;
+        align-items: flex-start;
+        a {
+            font-size: 16px;
+            line-height: 1.3em;
+            font-weight: 700;
+            color: #000;
+        }
         span:first-child {
             font-weight: 400;
             font-size: 18px;
@@ -183,6 +190,9 @@
         }
         &__info {
             font-size: 14px;
+            a {
+                font-size: 14px;
+            }
             span:first-child {
                 font-size: 16px;
             }
