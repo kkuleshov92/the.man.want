@@ -77,7 +77,7 @@ if(document.querySelector('.play-audio') != null) {
         equalizer = document.querySelector('.audio-equalizer'),
         audio = document.querySelector('audio');
 
-    setTimeout(checkStatus, 1000);
+    setTimeout(checkStatus, 3000);
 
 
     if ( !getCookie( "cookie" ) ) {
@@ -85,11 +85,11 @@ if(document.querySelector('.play-audio') != null) {
     }
 
     function checkStatus() {
-        if((!getCookie("status")) || (getCookie("status") == 1)) {
+        if((!getCookie("status")) || (getCookie("status") === 1)) {
             audioBtn.innerHTML = 'ВЫКЛ.';
             equalizer.classList.add('onplay');
             audio.play();
-        } else if (getCookie("status") == 0) {
+        } else if (getCookie("status") === 0) {
             audioBtn.innerHTML = 'ВКЛ.';
             equalizer.classList.remove('onplay');
             audio.pause();
@@ -169,7 +169,6 @@ if (param_name) {
 
 // Обработчик получения фокуса
 function get_focus() {
-    audio.play();
     audio.muted = false;
 }
 // Обработчик потери фокуса
