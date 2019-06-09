@@ -77,7 +77,7 @@ if(document.querySelector('.play-audio') != null) {
         equalizer = document.querySelector('.audio-equalizer'),
         audio = document.querySelector('audio');
 
-    setTimeout(checkStatus, 3000);
+    setTimeout(checkStatus, 1000);
 
 
     if ( !getCookie( "cookie" ) ) {
@@ -126,3 +126,53 @@ $('a[href*="#"]').click(function() {
     }, 1000);
     return false;
 });
+
+var param_name, event_name;
+// Универсальный обработчик
+if (typeof document.hidden!='undefined') {
+    param_name='hidden';
+    event_name='visibilitychange';
+}
+// Mozilla-based браузеры
+else if (typeof document.mozHidden!='undefined') {
+    param_name='mozHidden';
+    event_name='mozvisibilitychange';
+}
+// IE-based браузеры
+else if (typeof document.msHidden!='undefined') {
+    param_name='msHidden';
+    event_name='msvisibilitychange';
+}
+// WebKit-based браузеры
+else if (typeof document.webkitHidden!='undefined') {
+    param_name='webkitHidden';
+    event_name='webkitvisibilitychange';
+}
+// Браузер не поддерживает Page Visibility API
+else {
+    param_name=false;
+    window.addEventListener('focus', get_focus, false);
+    window.addEventListener('blur', lost_focus, false);
+}
+
+// Установить обработчик события, если оно поддерживается
+if (param_name) {
+    document.addEventListener(event_name, function() {
+        if (document[param_name]) {
+            lost_focus();
+        }
+        else {
+            get_focus();
+        }
+    }, false);
+}
+
+// Обработчик получения фокуса
+function get_focus() {
+    audio.play();
+    audio.muted = false;
+}
+// Обработчик потери фокуса
+function lost_focus() {
+    audio.muted = true;
+}

@@ -64,16 +64,33 @@ if(document.getElementById('video') != null) {
 //open-close video
 
     let openVidBtn = document.querySelectorAll('.open-video'),
-        closeVidBtn = document.querySelector('.video-close');
+        closeVidBtn = document.querySelector('.video-close'),
+        audioTrigger = 0;
 
     openVidBtn.forEach(function (e) {
         e.addEventListener('click', function () {
             document.querySelector('.video-wrap').classList.add('opened');
+
+            if(!audio.paused) {
+                audioBtn.innerHTML = 'ВКЛ.';
+                equalizer.classList.remove('onplay');
+                audio.pause();
+                setCookieOff();
+                audioTrigger = 1;
+            }
         });
     });
 
     closeVidBtn.addEventListener('click', function () {
         video.pause();
         document.querySelector('.video-wrap').classList.remove('opened');
+
+        if(audioTrigger === 1) {
+            audioBtn.innerHTML = 'ВЫКЛ.';
+            equalizer.classList.add('onplay');
+            audio.play();
+            setCookieOn();
+            audioTrigger = 0;
+        }
     });
 }
