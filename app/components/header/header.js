@@ -85,11 +85,11 @@ if(document.querySelector('.play-audio') != null) {
     }
 
     function checkStatus() {
-        if((!getCookie("status")) || (getCookie("status") === 1)) {
+        if((!getCookie("status")) || (getCookie("status") == 1)) {
             audioBtn.innerHTML = 'ВЫКЛ.';
             equalizer.classList.add('onplay');
             audio.play();
-        } else if (getCookie("status") === 0) {
+        } else if (getCookie("status") == 0) {
             audioBtn.innerHTML = 'ВКЛ.';
             equalizer.classList.remove('onplay');
             audio.pause();
