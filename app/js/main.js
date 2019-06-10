@@ -12,7 +12,6 @@
 //=include ../components/menu/menu.js
 //=include ../components/offer/offer.js
 //=include ../components/order-car/order-car.js
-//=include ../components/order-consult/order-consult.js
 //=include ../components/reviews/reviews.js
 //=include ../components/favor/favor.js
 //=include ../components/video/video.js

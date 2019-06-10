@@ -4,8 +4,6 @@ let leftPagin = $(".header__pagination-left");
 let rightPagin = $(".header__pagination-right");
 let line = $('.line-inner');
 
-
-
 $(".header__right-slider").on("init", function(event, slick){
     $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1) + ''));
     $(rightPagin).text(String('/0' + parseInt(slick.slideCount)));
@@ -48,8 +46,12 @@ $('.header__right-slider').slick({
     nextArrow: $('.header__next')
 });
 
+
+//time
 var date = new Date(new Date().getTime() + 31104000 * 1000);
 
+
+//cookies
 $('.btn_cookies').click(function(){
     $('.cookies').fadeOut();
     document.cookie = "cookie=1;expires=" + date.toUTCString();
@@ -71,15 +73,23 @@ function getCookie(name) {
 }
 
 //audio controls
-if(document.querySelector('.play-audio') != null) {
+if(document.querySelector('.play-audio') != null) { // проверка наличия аудио на странице
+    let audio = document.createElement('audio');
+    audio.src = 'sound/music.mp3';
+    audio.controls = 'controls';
+    audio.muted = true;
 
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('.audio').appendChild(audio);
+        audio.muted = false;
+    });
     var audioBtn = document.querySelector('.play-audio'),
-        equalizer = document.querySelector('.audio-equalizer'),
-        audio = document.querySelector('audio');
+        equalizer = document.querySelector('.audio-equalizer');
+        // audio = document.querySelector('audio');
 
-    setTimeout(checkStatus, 3000);
+    setTimeout(checkStatus, 3000); //включение плеера
 
-
+    //проверка куки
     if ( !getCookie( "cookie" ) ) {
         $('.cookies').fadeIn();
     }
@@ -97,9 +107,7 @@ if(document.querySelector('.play-audio') != null) {
         console.log('go!');
     }
 
-
-
-
+    //вкл/выкл аудио кнопкой
     audioBtn.addEventListener('click', function () {
         if (equalizer.classList.contains('onplay')) {
             audioBtn.innerHTML = 'ВКЛ.';
@@ -127,6 +135,8 @@ $('a[href*="#"]').click(function() {
     return false;
 });
 
+
+//выключение звука при переходе на другую вкладку
 var param_name, event_name;
 // Универсальный обработчик
 if (typeof document.hidden!='undefined') {
@@ -175,3 +185,5 @@ function get_focus() {
 function lost_focus() {
     audio.muted = true;
 }
+
+
