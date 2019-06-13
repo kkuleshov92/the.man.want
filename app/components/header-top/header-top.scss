@@ -1,9 +1,21 @@
 .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 123px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 123px;
   z-index: 10;
+  // transition: .5s;
+  min-height: auto;
+
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    background: #1c1c1e;
+    left: 0;
+    top: 0;
+    padding: 0px 9%;
+    min-height: 70px;
+  }
 
   &__logo {
     position: relative;
@@ -38,6 +50,11 @@
   .header-top {
     margin-bottom: 70px;
 
+    &.fixed {
+      padding: 0px 2%;
+      min-height: 70px;
+    }
+
     &__logo {
       flex-basis: 60%;
     }
@@ -46,9 +63,15 @@
 
 @media (max-width: 1023px) {
   .header-top {
+    &.fixed {
+      padding: 0px 2%;
+      min-height: 50px;
+    }
+
     &__logo {
       flex-basis: 50%;
     }
+
     &__tel {
       flex-basis: 30%;
     }
@@ -58,9 +81,11 @@
 @media (max-width: 639px) {
   .header-top {
     margin-bottom: 40px;
+
     &__logo {
       flex-basis: 20%;
     }
+
     &__tel {
       flex-basis: 50%;
     }
