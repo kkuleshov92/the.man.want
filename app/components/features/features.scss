@@ -52,7 +52,7 @@
 
   &__img {
     width: 100%;
-    max-width: 132px;
+    max-width: 90px;
     //margin: 0 auto 30px;
     margin-bottom: 45px;
     height: 105px;
@@ -121,6 +121,10 @@
     &__feature {
       width: 25%;
       margin: 0;
+      align-items: center;
+    }
+    &__num {
+      margin-top: 10px;
     }
     &__img {
       margin-bottom: 0;
