@@ -14,10 +14,11 @@
     z-index: 0;
   }
 }
+
 .header {
   background-color: #1c1c1e;
   background-image: url("../img/header-fog.png"), url("../img/header-bg.jpg");
-  background-repeat:repeat, repeat;
+  background-repeat: repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
   padding: 50px 0 157px;
@@ -80,6 +81,7 @@
   &__right-slide {
     width: 100%;
   }
+
   &__pagination {
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +93,7 @@
     top: 160px;
     transition: .5s ease;
   }
+
   &__pagination-left {
     color: #ffffff;
     font-size: 22px;
@@ -123,6 +126,7 @@
       background: #d3964d;
       opacity: 1;
     }
+
     .blink {
       animation: line 7.1s linear;
     }
@@ -132,12 +136,14 @@
     0% {
       width: 1%;
     }
+
     100% {
       width: 100%;
     }
   }
 
-  &__prev, &__next {
+  &__prev,
+  &__next {
     width: 45px;
     height: 8px;
     cursor: pointer;
@@ -204,7 +210,7 @@
     margin-right: 50px;
 
     .play-video-btn {
-      background: rgba(0, 0, 0, .35) url("../img/play-video.png") no-repeat  22px center;
+      background: rgba(0, 0, 0, .35) url("../img/play-video.png") no-repeat 22px center;
       width: 55px;
       height: 55px;
       border-radius: 50%;
@@ -237,6 +243,7 @@
       color: #fff;
     }
   }
+
   &__audio {
     display: flex;
     width: 100px;
@@ -262,9 +269,11 @@
     text-align: right;
     width: 60px;
   }
+
   &__audio {
     position: relative;
   }
+
   .audio-equalizer {
     display: flex;
     align-items: flex-end;
@@ -284,15 +293,19 @@
         &:nth-child(1) {
           animation: eq1 1s linear infinite;
         }
+
         &:nth-child(2) {
           animation: eq2 1s linear .2s infinite;
         }
+
         &:nth-child(3) {
           animation: eq3 1s linear .4s infinite;
         }
+
         &:nth-child(4) {
           animation: eq1 1s linear .2s infinite;
         }
+
         &:nth-child(5) {
           animation: eq3 1s linear .4s infinite;
         }
@@ -302,50 +315,62 @@
   }
 
   @keyframes eq1 {
-    0%{
+    0% {
       min-height: 10px;
     }
+
     50% {
       min-height: 20px;
     }
+
     100% {
       min-height: 10px;
     }
   }
 
   @keyframes eq2 {
-    0%{
+    0% {
       min-height: 10px;
     }
+
     25% {
       min-height: 5px;
     }
+
     50% {
       min-height: 10px;
     }
+
     50% {
       min-height: 13px;
     }
+
     70% {
       min-height: 15px;
     }
+
     100% {
       min-height: 10px;
     }
   }
+
   @keyframes eq3 {
-    0%{
+    0% {
       min-height: 10px;
     }
+
     25% {
       min-height: 5px;
     }
+
     50% {
       min-height: 10px;
     }
+
     75% {
       min-height: 15px;
     }
+
     100% {
       min-height: 10px;
     }
@@ -376,7 +401,7 @@
 @media (max-width: 1279px) {
   .header {
     padding: 50px 0 80px;
-    background-position: center center,center center;
+    background-position: center center, center center;
 
 
     &__bottom-row {
@@ -387,7 +412,8 @@
       flex-basis: 60%;
     }
 
-    &__next, &__prev {
+    &__next,
+    &__prev {
       top: -30px;
       right: 0px;
       z-index: 3;
@@ -403,6 +429,7 @@
       right: 40px;
       z-index: 3;
     }
+
     &__center {
       //flex-wrap: wrap-reverse;
     }
@@ -416,20 +443,24 @@
     &__logo {
       flex-basis: 50%;
     }
+
     &__title {
       h1 {
         line-height: 54px;
         margin-bottom: 15px;
       }
     }
+
     &__description {
       p {
         padding: 0;
+
         &:first-child {
           margin-bottom: 15px;
         }
       }
     }
+
     &__tel {
       flex-basis: 30%;
     }
@@ -443,6 +474,7 @@
       text-align: center;
       margin-bottom: 30px;
     }
+
     &__right-slider {
       width: 80%;
       left: 0;
@@ -454,7 +486,8 @@
       margin-bottom: 40px;
     }
 
-    &__next, &__prev {
+    &__next,
+    &__prev {
       top: -20px;
       right: 23px;
       z-index: 3;
@@ -495,6 +528,7 @@
     &__logo {
       flex-basis: 20%;
     }
+
     &__tel {
       flex-basis: 50%;
     }
@@ -529,6 +563,7 @@
       right: 130px;
       top: 37px;
     }
+
     &__next {
       right: -55px;
       top: 43px;
@@ -550,20 +585,23 @@
 
 @media (max-width: 479px) {
   .header {
-    padding: 20px 0!important;
+    padding: 20px 0 !important;
     background-size: cover, cover;
+
     &__tel {
       display: none;
     }
 
     &__title {
-      h1{
+      h1 {
         font-size: 34px;
       }
     }
+
     &__pagination {
       right: 0;
     }
+
     &__prev {
       right: 90px;
     }

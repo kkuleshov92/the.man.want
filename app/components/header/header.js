@@ -4,21 +4,21 @@ let leftPagin = $(".header__pagination-left");
 let rightPagin = $(".header__pagination-right");
 let line = $('.line-inner');
 
-$(".header__right-slider").on("init", function(event, slick){
+$(".header__right-slider").on("init", function (event, slick) {
     $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1) + ''));
     $(rightPagin).text(String('/0' + parseInt(slick.slideCount)));
     $(line).addClass('blink');
 });
 $(document).ready(function () {
 
-    $(".header__right-slider").on("afterChange", function(event, slick, currentSlide){
+    $(".header__right-slider").on("afterChange", function (event, slick, currentSlide) {
         $(leftPagin).text(String('0' + parseInt(slick.currentSlide + 1)) + '');
         $(rightPagin).text(String('/0' + slick.slideCount));
     });
 
     $('.header__left-slider').on('beforeChange', function () {
         $(line).css("animation", 'null');
-        setTimeout(function(){
+        setTimeout(function () {
             $(line).css("animation", 'line 7.1s linear infinite');
         }, 500);
     });
@@ -52,7 +52,7 @@ var date = new Date(new Date().getTime() + 31104000 * 1000);
 
 
 //cookies
-$('.btn_cookies').click(function(){
+$('.btn_cookies').click(function () {
     $('.cookies').fadeOut();
     document.cookie = "cookie=1;expires=" + date.toUTCString();
 });
@@ -73,29 +73,29 @@ function getCookie(name) {
 }
 
 //audio controls
-if(document.querySelector('.play-audio') != null) { // проверка наличия аудио на странице
+if (document.querySelector('.play-audio') != null) { // проверка наличия аудио на странице
     let audio = document.createElement('audio');
     audio.src = 'sound/music.mp3';
     audio.controls = 'controls';
     audio.muted = true;
 
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.audio').appendChild(audio);
         audio.muted = false;
     });
     var audioBtn = document.querySelector('.play-audio'),
         equalizer = document.querySelector('.audio-equalizer');
-        // audio = document.querySelector('audio');
+    // audio = document.querySelector('audio');
 
     setTimeout(checkStatus, 3000); //включение плеера
 
     //проверка куки
-    if ( !getCookie( "cookie" ) ) {
+    if (!getCookie("cookie")) {
         $('.cookies').fadeIn();
     }
 
     function checkStatus() {
-        if((!getCookie("status")) || (getCookie("status") == 1)) {
+        if ((!getCookie("status")) || (getCookie("status") == 1)) {
             audioBtn.innerHTML = 'ВЫКЛ.';
             equalizer.classList.add('onplay');
             audio.play();
@@ -128,7 +128,7 @@ if(document.querySelector('.play-audio') != null) { // проверка нали
 
 //scroll to anchor
 let $page = $('html, body');
-$('a[href*="#"]').click(function() {
+$('a[href*="#"]').click(function () {
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 1000);
@@ -139,39 +139,38 @@ $('a[href*="#"]').click(function() {
 //выключение звука при переходе на другую вкладку
 var param_name, event_name;
 // Универсальный обработчик
-if (typeof document.hidden!='undefined') {
-    param_name='hidden';
-    event_name='visibilitychange';
+if (typeof document.hidden != 'undefined') {
+    param_name = 'hidden';
+    event_name = 'visibilitychange';
 }
 // Mozilla-based браузеры
-else if (typeof document.mozHidden!='undefined') {
-    param_name='mozHidden';
-    event_name='mozvisibilitychange';
+else if (typeof document.mozHidden != 'undefined') {
+    param_name = 'mozHidden';
+    event_name = 'mozvisibilitychange';
 }
 // IE-based браузеры
-else if (typeof document.msHidden!='undefined') {
-    param_name='msHidden';
-    event_name='msvisibilitychange';
+else if (typeof document.msHidden != 'undefined') {
+    param_name = 'msHidden';
+    event_name = 'msvisibilitychange';
 }
 // WebKit-based браузеры
-else if (typeof document.webkitHidden!='undefined') {
-    param_name='webkitHidden';
-    event_name='webkitvisibilitychange';
+else if (typeof document.webkitHidden != 'undefined') {
+    param_name = 'webkitHidden';
+    event_name = 'webkitvisibilitychange';
 }
 // Браузер не поддерживает Page Visibility API
 else {
-    param_name=false;
+    param_name = false;
     window.addEventListener('focus', get_focus, false);
     window.addEventListener('blur', lost_focus, false);
 }
 
 // Установить обработчик события, если оно поддерживается
 if (param_name) {
-    document.addEventListener(event_name, function() {
+    document.addEventListener(event_name, function () {
         if (document[param_name]) {
             lost_focus();
-        }
-        else {
+        } else {
             get_focus();
         }
     }, false);
@@ -187,3 +186,11 @@ function lost_focus() {
 }
 
 
+//header top fixed
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('.header-top').addClass('fixed');
+    } else {
+        $('.header-top').removeClass('fixed');
+    }
+});
