@@ -16,9 +16,11 @@
     }
     &__img-box {
         position: relative;
+        max-width: 150px;
         img {
             z-index: 1;
             position: relative;
+            max-width: 100%;
         }
         &::before {
             content: '';
