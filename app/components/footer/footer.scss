@@ -33,6 +33,10 @@
         }
         &_1 {
             margin-right: 229px;
+            a {
+                display: block;
+                width: 70px;
+            }
         }
         &:not(&_1) {
             margin-top: 9px;
@@ -79,7 +83,7 @@
         transition: all .2s linear;
         display: block;
         position: fixed;
-        bottom: 30%;
+        bottom: 10%;
         right: 10%;
         z-index: 1;
         display: none;
