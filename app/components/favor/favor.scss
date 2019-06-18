@@ -44,6 +44,28 @@
             letter-spacing: .045em;
             line-height: 26px;
         }
+        &_1::before,
+        &_2::before,
+        &_3::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            opacity: .2;
+        }
+        &_1::before {
+            background: url(../img/favor-item1.png)no-repeat center center / cover;
+        }
+        &_2::before {
+            background: url(../img/favor-item2.png)no-repeat center center / cover;
+        }
+        &_3::before {
+            background: url(../img/favor-item3.jpg)no-repeat center center / cover;
+            opacity: .1;
+        }
     }
     .btn_favor {
         margin: auto auto 0;
