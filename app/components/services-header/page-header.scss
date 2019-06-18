@@ -2,6 +2,9 @@
   background: #0c0c0c url("../img/services-page-dots.png") no-repeat top 0 right -240px;
   max-height: 650px;
 
+  &::after {
+    display: none;
+  }
 
   &__title {
 
