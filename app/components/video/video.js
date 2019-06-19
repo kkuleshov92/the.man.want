@@ -71,10 +71,10 @@ if(document.getElementById('video') != null) {
         e.addEventListener('click', function () {
             document.querySelector('.video-wrap').classList.add('opened');
 
-            if(!audio.paused) {
+            if(!document.querySelector('audio').paused) {
                 audioBtn.innerHTML = 'ВКЛ.';
                 equalizer.classList.remove('onplay');
-                audio.pause();
+                document.querySelector('audio').pause();
                 setCookieOff();
                 audioTrigger = 1;
             }
@@ -88,7 +88,7 @@ if(document.getElementById('video') != null) {
         if(audioTrigger === 1) {
             audioBtn.innerHTML = 'ВЫКЛ.';
             equalizer.classList.add('onplay');
-            audio.play();
+            document.querySelector('audio').play();
             setCookieOn();
             audioTrigger = 0;
         }

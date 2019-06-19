@@ -74,13 +74,9 @@ function getCookie(name) {
 
 //audio controls
 if (document.querySelector('.play-audio') != null) { // проверка наличия аудио на странице
-    let audio = document.createElement('audio');
-    audio.src = 'sound/music.mp3';
-    audio.controls = 'controls';
-    audio.muted = true;
+    let audio = document.getElementById('audio');
 
     document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.audio').appendChild(audio);
         audio.muted = false;
     });
     var audioBtn = document.querySelector('.play-audio'),
