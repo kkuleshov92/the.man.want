@@ -37,7 +37,7 @@ if(document.querySelector('.order_car')) {
     openConsultBtn.forEach(function (el) {
         el.addEventListener('click', function () {
             carPopup.classList.add('opened');
-            popupTitle.querySelector('h3').innerHTML = 'Заполните форму, наши сецмалисты предоставят Вам консультацию в ближайшее время!';
+            popupTitle.querySelector('h3').innerHTML = 'Заполните форму, наши специалисты предоставят Вам консультацию в ближайшее время!';
             document.body.style.overflow = 'hidden';
         });
     });

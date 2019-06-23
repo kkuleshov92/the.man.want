@@ -20,6 +20,7 @@
         margin-top: 67px;
         flex-wrap: wrap;
     }
+
     &__item {
         border: 1px solid #e1e1e1;
         width: 400px;
@@ -44,10 +45,7 @@
             letter-spacing: .045em;
             line-height: 26px;
         }
-        &_1::before,
-        &_2::before,
-        &_3::before {
-            content: '';
+        &-bg {
             position: absolute;
             height: 100%;
             width: 100%;
@@ -55,16 +53,13 @@
             top: 0;
             z-index: -1;
             opacity: .2;
-        }
-        &_1::before {
-            background: url(../img/favor-item1.png)no-repeat center center / cover;
-        }
-        &_2::before {
-            background: url(../img/favor-item2.png)no-repeat center center / cover;
-        }
-        &_3::before {
-            background: url(../img/favor-item3.jpg)no-repeat center center / cover;
-            opacity: .1;
+            &_1,
+            &_2,
+            &_3 {
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
         }
     }
     .btn_favor {
@@ -76,7 +71,10 @@
         bottom: -10px;
         left: 50%;
         transform: translateX(-50%);
-        background: #000 url(../img/hover-order-card.png) no-repeat center center / cover;
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
         color: #fff;
         width: 460px;
         padding: 30px 30px 50px;
